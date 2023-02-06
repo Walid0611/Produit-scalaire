@@ -1,6 +1,7 @@
-ALGORITHM dot_product
+procedure dot_product ps: (v1, v2: vecteur de RI, ps: réel)[]
 VAR
-   ps: (v1, v2: vecteur de RI, ps: réel)[]
+   v1:INTEGER
+   v2:INTEGER
 BEGIN
     write("ecrire la procedure")
     read("le calcule")
@@ -23,18 +24,38 @@ BEGIN
   End if
 END
 
-ALGORITHM Function dot_product
+ Function dot_product  IR: (v1, v2: vector of IR): real
 VAR
-   IR: (v1, v2: vector of IR): real
+  v1:INTEGER
+  v2:INTEGER
 BEGIN
      Declare ps as real
   ps <- 0
   For (i <- 1 to size(v1))then{
     ps <- ps + v1[i] * v2[i]
+   
+   Write "The vectors are orthogonal"
+  Else
+    Write "The vectors are not orthogonal"
+  End if
+  
   End for
   Return ps
   }
+  procedure
+   Declare ps as real
+  ps <- 0
+  For (i <- 1 to size(v1))then{
+    ps <- ps + v1[i] * v2[i]}
+   
+   Write "The vectors are orthogonal"
+  Else
+    Write "The vectors are not orthogonal"
+  End if
+  
   If dot_product(v1, v2) == 0 then
+
+
     Write "The vectors are orthogonal"
   Else
     Write "The vectors are not orthogonal"
